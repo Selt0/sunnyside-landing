@@ -39,6 +39,11 @@ nav {
 	justify-content: space-between;
 }
 
+.nav-logo {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
 .nav-menu a {
 	margin-left: 2em;
 	text-decoration: none;
@@ -60,6 +65,10 @@ nav {
 #nav-btn:hover {
 	background-color: #6eceff;
 	color: #fff;
+}
+
+.nav-toggle {
+	display: none;
 }
 
 /* HERO BANNER */
@@ -181,6 +190,7 @@ h3 {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
+
 .img-content p {
 	width: 50%;
 	margin: 1em auto 3.5em auto;
@@ -287,4 +297,163 @@ footer {
 
 .footer-socialLinks svg:hover {
 	fill: #fff;
+}
+
+@media screen and (width <= 1024px) {
+	.content {
+		padding: 4em;
+	}
+
+	.img-content p {
+		width: 80%;
+	}
+}
+
+@media screen and (width <= 930px) {
+	.content {
+		padding: 1.5em;
+	}
+
+	.content:nth-child(1) {
+		padding-left: 2em;
+	}
+
+	.content ~ .content {
+		padding-right: 2em;
+	}
+
+	.img-content {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.img-content p {
+		width: 75%;
+		margin: 0.8em auto 0.5em auto;
+	}
+
+	.testi-container {
+		width: 80%;
+	}
+}
+
+@media screen and (width < 710px) {
+	.nav-menu {
+		display: none;
+		font-size: 1.3em;
+	}
+
+	.nav-toggle {
+		display: block;
+	}
+
+	#nav-btn {
+		background-color: #fbd601;
+		margin-bottom: 2em;
+		width: 150px;
+		padding: 0.8em;
+	}
+
+	.active {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		justify-content: center;
+		align-items: center;
+		margin: 3em auto;
+		width: 83%;
+	}
+
+	.active::before {
+		content: '';
+		height: 0;
+		width: 0;
+		border-left: 30px solid transparent;
+		border-bottom: 35px solid #fff;
+		top: -34px;
+		right: 0;
+		position: absolute;
+	}
+
+	.active a {
+		color: #807e8c;
+		margin-top: 2em;
+		margin-left: 0;
+	}
+
+	.hero {
+		background-image: url('./images/mobile/image-header.jpg');
+		background-size: cover;
+		height: 500px;
+	}
+
+	h1 {
+		font-size: 2em;
+		margin: 1.2em auto;
+	}
+
+	.col-2-grid {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.col-2-grid .col {
+		min-height: 315px;
+		padding-bottom: 3em;
+	}
+	.col-2-grid .col:nth-child(2) {
+		order: 0;
+	}
+
+	.col-2-grid .col:nth-child(1) {
+		order: 1;
+	}
+
+	.col-2-grid .col:nth-child(3) {
+		order: 2;
+	}
+	.col-2-grid .col:nth-child(4) {
+		order: 3;
+	}
+
+	.content {
+		padding: 1.5em !important;
+	}
+	.img-content {
+		order: 4;
+		height: 550px;
+	}
+
+	.underline::after {
+		margin-left: -61px;
+		left: 50%;
+	}
+
+	.testimonials {
+		margin-top: 5em;
+		margin-bottom: 0;
+	}
+
+	#gray-header {
+		font-size: 0.8em;
+	}
+
+	.testi-container {
+		flex-direction: column;
+	}
+
+	.col-3 {
+		margin-bottom: 3em;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	.photo-grid {
+		flex-wrap: wrap;
+	}
+	.photo-grid img {
+		width: 50%;
+	}
 }
