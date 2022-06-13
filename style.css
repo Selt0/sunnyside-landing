@@ -1,0 +1,290 @@
+/* GENERAL STYLES */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	color: #4b4c50;
+}
+
+body {
+	margin-top: 0;
+	font-size: 18px;
+	font-family: 'Barlow', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Fraunces', serif;
+	font-weight: 900;
+	color: #232c34;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+p {
+	line-height: 1.5;
+}
+
+/* NAV MENU */
+nav {
+	position: absolute;
+	padding: 2em;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-menu a {
+	margin-left: 2em;
+	text-decoration: none;
+	color: #fff;
+	font-size: 0.8em;
+}
+
+#nav-btn {
+	color: black;
+	background-color: #fff;
+	padding: 1em;
+	border-radius: 25px;
+	width: 115px;
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#nav-btn:hover {
+	background-color: #6eceff;
+	color: #fff;
+}
+
+/* HERO BANNER */
+
+.hero {
+	background-color: #3dbeff;
+	background-image: url(./images/desktop/image-header.jpg);
+	height: 700px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	text-align: center;
+	padding-top: 5em;
+}
+
+h1 {
+	font-weight: 900;
+	margin: 1.3em auto;
+	font-size: 3em;
+	color: #fff;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+/* LAYOUT */
+
+.col-2-grid {
+	max-width: 1500px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(400px, 1fr));
+	grid-template-rows: repeat(3, minmax(340px, 1fr));
+	row-gap: 0;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 6em;
+}
+
+.content:nth-child(1) {
+	padding-left: calc(6em + 4vw);
+}
+
+.content ~ .content {
+	padding-right: calc(6em + 4vw);
+}
+
+.content p {
+	color: #84808b;
+	margin: 2em auto;
+}
+
+.content a {
+	text-transform: uppercase;
+	position: relative;
+}
+
+.img img {
+	width: 100%;
+	height: 100%;
+}
+
+.underline::after {
+	content: '';
+	position: absolute;
+	bottom: -0.1rem;
+	left: -8px;
+	right: 0;
+	width: 120px;
+	height: 0.6rem;
+	z-index: -1;
+	border-radius: 0.5rem;
+	transition: 0.35s;
+}
+
+.yellow.underline::after {
+	background-color: #fff0bc;
+}
+
+.yellow.underline:hover::after {
+	background-color: #ffd101;
+}
+
+.red.underline::after {
+	background-color: #ffd9d3;
+}
+
+.red.underline:hover::after {
+	background-color: #f77669;
+}
+
+.img-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: center;
+}
+
+.col-2-grid > .img-content {
+	background-image: url('./images/desktop/image-graphic-design.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+.img-content ~ .img-content {
+	background-image: url('./images/desktop/image-photography.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.img-content p {
+	width: 50%;
+	margin: 1em auto 3.5em auto;
+}
+
+.testimonials {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 7em auto;
+}
+
+#gray-header {
+	color: #a6a6a9;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin-bottom: 2em;
+}
+
+.testi-container {
+	display: flex;
+	justify-content: center;
+	width: 75%;
+	margin-top: 3em;
+	text-align: center;
+}
+
+.testi-container .col-3:nth-child(2) {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.profile img {
+	width: 75px;
+	border-radius: 50%;
+	margin-bottom: 3em;
+}
+
+.author {
+	margin-top: 3em;
+	margin-bottom: 10px;
+	font-family: 'Fraunces', serif;
+	font-weight: 900;
+	color: #232c34;
+}
+
+.title {
+	color: #b4b2b3;
+	font-size: 0.7em;
+}
+
+.photo-grid {
+	display: flex;
+}
+
+.photo-grid img {
+	width: 100%;
+}
+
+footer {
+	background-color: #90d4c5;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer-logo {
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
+
+.footer-links {
+	margin-bottom: 4em;
+}
+
+.footer-links a {
+	color: #45897a;
+}
+
+.footer-links a:nth-child(2) {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+.footer-links a:hover {
+	color: #fff;
+}
+
+.footer-socialLinks {
+	width: 300px;
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 3em;
+}
+
+.footer-socialLinks svg {
+	width: 20px;
+	height: 20px;
+	fill: #2c7566;
+	cursor: pointer;
+}
+
+.footer-socialLinks svg:hover {
+	fill: #fff;
+}
