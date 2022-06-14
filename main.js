@@ -11,7 +11,6 @@ document.addEventListener('click', e => {
 		navMenu.classList.contains('active') &&
 		!e.target.classList.contains('nav-menu')
 	) {
-		console.log('fired!')
 		navMenu.classList.toggle('active')
 	}
 })
