@@ -299,7 +299,7 @@ footer {
 	fill: #fff;
 }
 
-@media screen and (width <= 1024px) {
+@media screen and (max-width: 1024px) {
 	.content {
 		padding: 4em;
 	}
@@ -309,7 +309,7 @@ footer {
 	}
 }
 
-@media screen and (width <= 930px) {
+@media screen and (max-width: 930px) {
 	.content {
 		padding: 1.5em;
 	}
@@ -337,7 +337,7 @@ footer {
 	}
 }
 
-@media screen and (width < 710px) {
+@media screen and (max-width: 710px) {
 	.nav-menu {
 		display: none;
 		font-size: 1.3em;
